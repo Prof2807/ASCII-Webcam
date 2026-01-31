@@ -1,0 +1,6 @@
+#preview {
+    font-family: monospace;
+    line-height: 8px; /* Adjust based on your font size */
+    font-size: 8px;
+    white-space: pre;
+}

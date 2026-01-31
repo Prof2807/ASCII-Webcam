@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Webcam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-900 flex flex-col items-center justify-center min-h-screen m-0 p-4">
+    <video id="webcam" class="hidden"></video>
+
+    <canvas id="processor" class="hidden"></canvas>
+    <div class="flex flex-col items-center gap-6">
+        <div class="bg-slate-800 p-4 rounded-lg border border-slate-700 shadow-xl flex gap-4">
+            <div class="flex flex-col">
+                <label for="density" class="text-slate-400 text-xs font-bold mb-1 uppercase">Density Style</label>
+                <select id="density"
+                    class="bg-slate-900 text-slate-200 border border-slate-600 rounded px-2 py-1 outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="BLOCKS">BLOCKS "█▓▒░ "</option>
+                    <option value="HIGH_CONTRAST">HIGH_CONTRAST "@%#*+=-:. "</option>
+                    <option value="ULTRA_DETAILED">ULTRA_DETAILED "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^'. "</option>
+                    <option value="MID">MID "N@#W$9876543210?!abc;:+=-,._"</option>
+                    <option value="MINIMALIST">MINIMALIST "#+-."</option>
+                </select>
+            </div>
+        </div>
+
+    <div class="flex flex-col">
+    <label for="color-picker" class="text-slate-400 text-xs font-bold mb-1 uppercase">Custom Color</label>
+    <input type="color" id="color-picker" value="#22c55e" 
+        class="bg-slate-900 border border-slate-600 rounded w-12 h-8 cursor-pointer">
+</div>
+
+    </div>
+    <pre id="preview" class="text-slate-300 font-mono text-[10px] leading-[8px]"></pre>
+    <script src="script.js"></script>
+</body>
+
+</html>
